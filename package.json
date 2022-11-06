@@ -1,0 +1,17 @@
+{ 
+"name": "Challenge-18-assignment",
+"version": "1.0.1",
+"description": "Social Network API",
+"main": "index.js",
+"license": "MIT",
+"scripts": {
+  "start": "node index",
+  "dev": "nodemon index",
+  "seed": "node utils/seed",
+  "heroku-postbuild": "node utils/seed.js"
+},
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.1"
+  }
+}
