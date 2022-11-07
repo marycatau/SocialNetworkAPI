@@ -26,7 +26,7 @@ module.exports = {
         return res.status(500).json(err);
       });
   },
-  // Delete a course
+  // Delete a user
   deleteUser(req, res) {
     userModel.findByIdAndDelete(req.params.id).exec()
       .then((user) =>
@@ -37,7 +37,7 @@ module.exports = {
       .then(() => res.json({ message: 'user deleted!' }))
       .catch((err) => res.status(500).json(err));
   },
-  // Update a course
+  // Update a user
   updateUser(req, res) {
     userModel.findByIdAndUpdate(req.params.id,
       { $set: req.body },
