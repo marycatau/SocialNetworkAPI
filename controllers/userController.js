@@ -64,7 +64,7 @@ module.exports = {
                     userModel.findByIdAndUpdate(req.params.id,{"friends":newFriends}).exec().then((user3) =>
                     !user3
                       ? res.status(404).json({ message: 'No user with this id!' })
-                      : res.json(user3)
+                      : res.json({ message: 'friend added!' })
                   );
             })
             }
@@ -86,7 +86,7 @@ module.exports = {
         .then((user3) =>
             !user3
             ? res.status(404).json({ message: 'No user with this id!' })
-            : res.json(user3)
+            : res.json({ message: 'friend deleted!' })
         );
     });       
   }
